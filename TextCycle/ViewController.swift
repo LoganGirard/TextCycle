@@ -17,6 +17,16 @@ class ViewController: UIViewController {
         
 }
 
+    @IBOutlet weak var FirstName: UITextField!
+    
+    @IBOutlet weak var LastName: UITextField!
+    
+    
+    @IBAction func submitProfileToParse() {
+        println("pressed")
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
