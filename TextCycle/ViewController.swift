@@ -15,11 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        let testObject = PFObject(className: "TestObject")
-        testObject["foo"] = "bar"
-        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            println("Object has been saved.")
-        }    }
+}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
