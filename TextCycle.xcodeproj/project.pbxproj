@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		818D2CD81AEDEA4F00C3D278 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818D2CD71AEDEA4F00C3D278 /* LoginView.swift */; };
+		818D2CDA1AEDFE9C00C3D278 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818D2CD91AEDFE9C00C3D278 /* Social.framework */; };
+		818D2CDC1AEDFECA00C3D278 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818D2CDB1AEDFECA00C3D278 /* Accounts.framework */; };
+		818D2CDE1AEE005500C3D278 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818D2CDD1AEE005500C3D278 /* Twitter.framework */; };
 		81B69DCE1AEA9AC100D9E4BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B69DCD1AEA9AC100D9E4BB /* AppDelegate.swift */; };
 		81B69DD01AEA9AC100D9E4BB /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B69DCF1AEA9AC100D9E4BB /* SignUpView.swift */; };
 		81B69DD31AEA9AC100D9E4BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B69DD11AEA9AC100D9E4BB /* Main.storyboard */; };
@@ -45,6 +48,9 @@
 
 /* Begin PBXFileReference section */
 		818D2CD71AEDEA4F00C3D278 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		818D2CD91AEDFE9C00C3D278 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		818D2CDB1AEDFECA00C3D278 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		818D2CDD1AEE005500C3D278 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		81B69DC81AEA9AC100D9E4BB /* TextCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B69DCC1AEA9AC100D9E4BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81B69DCD1AEA9AC100D9E4BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +85,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				818D2CDE1AEE005500C3D278 /* Twitter.framework in Frameworks */,
+				818D2CDC1AEDFECA00C3D278 /* Accounts.framework in Frameworks */,
+				818D2CDA1AEDFE9C00C3D278 /* Social.framework in Frameworks */,
 				81B69E0F1AEAA08300D9E4BB /* libsqlite3.dylib in Frameworks */,
 				81B69E0D1AEAA07800D9E4BB /* libz.dylib in Frameworks */,
 				81B69E0B1AEAA06D00D9E4BB /* SystemConfiguration.framework in Frameworks */,
@@ -170,6 +179,9 @@
 		81B69DED1AEA9F9E00D9E4BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				818D2CDD1AEE005500C3D278 /* Twitter.framework */,
+				818D2CDB1AEDFECA00C3D278 /* Accounts.framework */,
+				818D2CD91AEDFE9C00C3D278 /* Social.framework */,
 				81B69E0E1AEAA08300D9E4BB /* libsqlite3.dylib */,
 				81B69E0C1AEAA07800D9E4BB /* libz.dylib */,
 				81B69E0A1AEAA06D00D9E4BB /* SystemConfiguration.framework */,
