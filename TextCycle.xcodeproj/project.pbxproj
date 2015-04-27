@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		818D2CD81AEDEA4F00C3D278 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818D2CD71AEDEA4F00C3D278 /* LoginView.swift */; };
 		81B69DCE1AEA9AC100D9E4BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B69DCD1AEA9AC100D9E4BB /* AppDelegate.swift */; };
-		81B69DD01AEA9AC100D9E4BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B69DCF1AEA9AC100D9E4BB /* ViewController.swift */; };
+		81B69DD01AEA9AC100D9E4BB /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B69DCF1AEA9AC100D9E4BB /* SignUpView.swift */; };
 		81B69DD31AEA9AC100D9E4BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B69DD11AEA9AC100D9E4BB /* Main.storyboard */; };
 		81B69DD51AEA9AC100D9E4BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81B69DD41AEA9AC100D9E4BB /* Images.xcassets */; };
 		81B69DD81AEA9AC100D9E4BB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B69DD61AEA9AC100D9E4BB /* LaunchScreen.xib */; };
@@ -43,10 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		818D2CD71AEDEA4F00C3D278 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		81B69DC81AEA9AC100D9E4BB /* TextCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B69DCC1AEA9AC100D9E4BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81B69DCD1AEA9AC100D9E4BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		81B69DCF1AEA9AC100D9E4BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		81B69DCF1AEA9AC100D9E4BB /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		81B69DD21AEA9AC100D9E4BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81B69DD41AEA9AC100D9E4BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		81B69DD71AEA9AC100D9E4BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -129,7 +131,8 @@
 		81B69DCA1AEA9AC100D9E4BB /* TextCycle */ = {
 			isa = PBXGroup;
 			children = (
-				81B69DCF1AEA9AC100D9E4BB /* ViewController.swift */,
+				81B69DCF1AEA9AC100D9E4BB /* SignUpView.swift */,
+				818D2CD71AEDEA4F00C3D278 /* LoginView.swift */,
 				81B69DCD1AEA9AC100D9E4BB /* AppDelegate.swift */,
 				81B69DD11AEA9AC100D9E4BB /* Main.storyboard */,
 				81B69DCB1AEA9AC100D9E4BB /* Supporting Files */,
@@ -288,7 +291,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81B69DD01AEA9AC100D9E4BB /* ViewController.swift in Sources */,
+				818D2CD81AEDEA4F00C3D278 /* LoginView.swift in Sources */,
+				81B69DD01AEA9AC100D9E4BB /* SignUpView.swift in Sources */,
 				81B69DCE1AEA9AC100D9E4BB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,6 +495,7 @@
 				81B69DE91AEA9AC100D9E4BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81B69DEA1AEA9AC100D9E4BB /* Build configuration list for PBXNativeTarget "TextCycleTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +504,7 @@
 				81B69DEC1AEA9AC100D9E4BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
