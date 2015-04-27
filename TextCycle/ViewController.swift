@@ -21,10 +21,28 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var LastName: UITextField!
     
+    @IBOutlet weak var userName: UITextField!
+    
+    @IBOutlet weak var password: UITextField!
+    
+    @IBOutlet weak var userEmail: UITextField!
+    
     
     @IBAction func submitProfileToParse() {
-        println("pressed")
+        var user = PFUser()
+            user.username = userName.text
+            user.password = password.text
+            user.email = userEmail.text
+        
+        user.signUpInBackgroundWithBlock {
+            (succeeded: Bool!, error: NSError!) -> Void in
+            if error == nil {
+                } else {
+                }
+        }
     }
+    
+    
 
     
     override func didReceiveMemoryWarning() {
