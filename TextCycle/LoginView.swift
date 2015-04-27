@@ -28,41 +28,67 @@ class LoginView: UIViewController, PFLogInViewControllerDelegate,
            
         } else {
             println("No Logged in user")
-            var login: PFLogInViewController = PFLogInViewController()
-            login.fields = PFLogInFields.UsernameAndPassword | PFLogInFields.LogInButton |        PFLogInFields.SignUpButton
-            self.presentViewController(login, animated: true, completion: nil)
+            var loginViewController = PFLogInViewController()
+            loginViewController.fields = PFLogInFields.UsernameAndPassword | PFLogInFields.LogInButton | PFLogInFields.SignUpButton
+            
+            loginViewController.delegate = self
+            
+            var signupViewController = PFSignUpViewController()
+            signupViewController.delegate = self
+            
+            self.presentViewController(loginViewController, animated: true, completion: nil)
         }
     }
     
     //MARK: Parse Login
 
     func logInViewController(logInController: PFLogInViewController!, shouldBeginLogInWithUsername username: String!, password: String!) -> Bool {
-        return true
-    }
-    
-    func logInViewController(logInController: PFLogInViewController!, didLogInUser user: PFUser!) {
+        
+        if(!username.isEmpty || !password.isEmpty){
+            return true
+        }else{
+            return false
+        }
         
     }
     
-    func logInViewController(logInController: PFLogInViewController!, didFailToLogInWithError error: NSError!) {
+    func logInViewController(logInController: PFLogInViewController!, didLogInUser user: PFUser!) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
+    func logInViewController(logInController: PFLogInViewController!, didFailToLogInWithError error: NSError!) {
+        println("failed to login")
     }
     
     //Mark: Parse Signup
     
     func signUpViewController(signUpController: PFSignUpViewController!, shouldBeginSignUp info: [NSObject : AnyObject]!) -> Bool {
-        return true
+        if let password = info?["password"] as? String {
+            
+            return password.utf16Count >= 8
+            
+        }else{
+            
+            return false
+        }
     }
     
     func signUpViewController(signUpController: PFSignUpViewController!, didSignUpUser user: PFUser!) {
-        
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func signUpViewController(signUpController: PFSignUpViewController!, didFailToSignUpWithError error: NSError!) {
-        
+        println("failed to sign up")
     }
     
     func signUpViewControllerDidCancelSignUp(signUpController: PFSignUpViewController!) {
+        println("user dismissed signup")
+    }
+   
+    //Mark: Actions
+    
+    @IBAction func logoutUser(sender: UIButton) {
         
+        PFUser.logOut()
     }
 }
