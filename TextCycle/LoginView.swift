@@ -63,13 +63,7 @@ class LoginView: UIViewController, PFLogInViewControllerDelegate,
     //Mark: Parse Signup
     
     func signUpViewController(signUpController: PFSignUpViewController, shouldBeginSignUp info: [NSObject : AnyObject]) -> Bool {
-        if let password = info["password"] as? String {
-            return count(password.utf16) >= 8
-            
-        }else{
-            
-            return false
-        }
+        return true 
     }
     
     func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
