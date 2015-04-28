@@ -12,7 +12,6 @@
 		818D2CDC1AEDFECA00C3D278 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818D2CDB1AEDFECA00C3D278 /* Accounts.framework */; };
 		818D2CDE1AEE005500C3D278 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818D2CDD1AEE005500C3D278 /* Twitter.framework */; };
 		81B69DCE1AEA9AC100D9E4BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B69DCD1AEA9AC100D9E4BB /* AppDelegate.swift */; };
-		81B69DD01AEA9AC100D9E4BB /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B69DCF1AEA9AC100D9E4BB /* SignUpView.swift */; };
 		81B69DD31AEA9AC100D9E4BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B69DD11AEA9AC100D9E4BB /* Main.storyboard */; };
 		81B69DD51AEA9AC100D9E4BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81B69DD41AEA9AC100D9E4BB /* Images.xcassets */; };
 		81B69DD81AEA9AC100D9E4BB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B69DD61AEA9AC100D9E4BB /* LaunchScreen.xib */; };
@@ -54,7 +53,6 @@
 		81B69DC81AEA9AC100D9E4BB /* TextCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B69DCC1AEA9AC100D9E4BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81B69DCD1AEA9AC100D9E4BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		81B69DCF1AEA9AC100D9E4BB /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		81B69DD21AEA9AC100D9E4BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81B69DD41AEA9AC100D9E4BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		81B69DD71AEA9AC100D9E4BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -140,7 +138,6 @@
 		81B69DCA1AEA9AC100D9E4BB /* TextCycle */ = {
 			isa = PBXGroup;
 			children = (
-				81B69DCF1AEA9AC100D9E4BB /* SignUpView.swift */,
 				818D2CD71AEDEA4F00C3D278 /* LoginView.swift */,
 				81B69DCD1AEA9AC100D9E4BB /* AppDelegate.swift */,
 				81B69DD11AEA9AC100D9E4BB /* Main.storyboard */,
@@ -304,7 +301,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				818D2CD81AEDEA4F00C3D278 /* LoginView.swift in Sources */,
-				81B69DD01AEA9AC100D9E4BB /* SignUpView.swift in Sources */,
 				81B69DCE1AEA9AC100D9E4BB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
