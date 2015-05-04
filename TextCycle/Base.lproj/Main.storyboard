@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MvM-Kp-T3U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MvM-Kp-T3U">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -35,12 +35,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQb-uN-meU">
-                                <rect key="frame" x="529" y="20" width="57" height="30"/>
-                                <state key="normal" title="Account">
+                                <rect key="frame" x="468" y="20" width="118" height="30"/>
+                                <state key="normal" title="Account Settings">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="logoutUser:" destination="MvM-Kp-T3U" eventType="touchUpInside" id="Cwl-T5-Wpy"/>
+                                    <segue destination="9cd-7J-pju" kind="show" id="Pvj-5i-EhD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,7 +65,38 @@
             </objects>
             <point key="canvasLocation" x="18" y="548"/>
         </scene>
-        <!--Book Search Result Table-->
+
+        <!--View Controller-->
+        <scene sceneID="GfV-br-22f">
+            <objects>
+                <viewController id="9cd-7J-pju" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KcP-CR-IIy"/>
+                        <viewControllerLayoutGuide type="bottom" id="2DH-e0-yqc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EeN-72-9tD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQi-MQ-kYZ">
+                                <rect key="frame" x="234" y="28" width="132" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RQi-MQ-kYZ" firstAttribute="centerX" secondItem="EeN-72-9tD" secondAttribute="centerX" id="3Vw-Fb-lZA"/>
+                            <constraint firstItem="RQi-MQ-kYZ" firstAttribute="top" secondItem="KcP-CR-IIy" secondAttribute="bottom" constant="8" id="GT3-ES-32u"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LDK-rZ-UFq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="754" y="110"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="CBI-3o-BD2">
             <objects>
                 <viewController id="ZY6-GC-KHd" customClass="BookSearchResultTable" customModule="TextCycle" customModuleProvider="target" sceneMemberID="viewController">
