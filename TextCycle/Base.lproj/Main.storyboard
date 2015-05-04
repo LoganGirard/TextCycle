@@ -43,21 +43,12 @@
                                     <action selector="logoutUser:" destination="MvM-Kp-T3U" eventType="touchUpInside" id="Cwl-T5-Wpy"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RNL-eU-ZIL">
-                                <rect key="frame" x="180" y="149" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="Lpn-jL-8Do"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9Ne-cj-vz1" firstAttribute="centerX" secondItem="xdT-EX-1cu" secondAttribute="centerX" id="3HR-BM-nID"/>
                             <constraint firstItem="JQb-uN-meU" firstAttribute="top" secondItem="ZHG-bp-nVP" secondAttribute="bottom" id="AYt-KA-59f"/>
-                            <constraint firstItem="RNL-eU-ZIL" firstAttribute="centerX" secondItem="xdT-EX-1cu" secondAttribute="centerX" id="MqZ-vy-kzk"/>
                             <constraint firstItem="xdT-EX-1cu" firstAttribute="centerY" secondItem="xx6-Hx-JtD" secondAttribute="centerY" id="T70-Ef-Aim"/>
-                            <constraint firstItem="xdT-EX-1cu" firstAttribute="top" secondItem="RNL-eU-ZIL" secondAttribute="bottom" constant="8" symbolic="YES" id="XQO-jN-iRV"/>
-                            <constraint firstItem="RNL-eU-ZIL" firstAttribute="top" secondItem="ZHG-bp-nVP" secondAttribute="bottom" constant="129" id="grE-j1-jZ3"/>
                             <constraint firstItem="xdT-EX-1cu" firstAttribute="leading" secondItem="xx6-Hx-JtD" secondAttribute="leadingMargin" id="lIG-uW-dWD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JQb-uN-meU" secondAttribute="trailing" constant="-2" id="mBI-PI-72j"/>
                             <constraint firstItem="xdT-EX-1cu" firstAttribute="trailing" secondItem="xx6-Hx-JtD" secondAttribute="trailingMargin" id="rEw-Ze-9XA"/>
@@ -65,18 +56,18 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="image" destination="RNL-eU-ZIL" id="ZkI-kF-OKN"/>
                         <outlet property="isbn" destination="xdT-EX-1cu" id="1P1-gn-OME"/>
+                        <segue destination="ZY6-GC-KHd" kind="show" identifier="showBookResults" id="uBM-kO-ahd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P1I-Gm-nA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18" y="548"/>
         </scene>
-        <!--View Controller-->
+        <!--Book Search Result Table-->
         <scene sceneID="CBI-3o-BD2">
             <objects>
-                <viewController id="ZY6-GC-KHd" sceneMemberID="viewController">
+                <viewController id="ZY6-GC-KHd" customClass="BookSearchResultTable" customModule="TextCycle" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="saI-LE-9Ng"/>
                         <viewControllerLayoutGuide type="bottom" id="t9g-sp-DPP"/>

@@ -24,7 +24,7 @@ class LoginView: UIViewController, PFLogInViewControllerDelegate,
         
         var user = PFUser.currentUser()
         if user != nil {
-            println(user)
+            
            
         } else {
             println("No Logged in user")
@@ -91,37 +91,13 @@ class LoginView: UIViewController, PFLogInViewControllerDelegate,
     @IBOutlet weak var image: UIImageView!
     
     @IBAction func searchBook(sender: AnyObject) {
-       
-        var query = PFQuery (className: "Books")
-        
-        query.whereKey("isbn", equalTo: isbn.text)
-        query.findObjectsInBackgroundWithBlock{
-            (objects:[AnyObject]!, error: NSError!) ->Void in
-            
-            if(error == nil) {
-                println("successfully retrieved \(objects.count) objects")
-        
-                for books in objects as [PFObject] {
-                    let userImageFile = books["photo"] as PFFile
-                    userImageFile.getDataInBackgroundWithBlock {
-                        (imageData: NSData!, error: NSError!) -> Void in
-                        if (error == nil) {
-                            println("found image")
-                            var subimage = UIImage(data: imageData)
-                            var derpimage = UIImageView(image: subimage)
-                            self.view.addSubview(derpimage)
-                        }
-                    }
-                }
-                
-            } else {
-                println(error);
-            }
-            
-        }
-        
-       
+        let subtitleCell = UITableViewStyle(rawValue: 1)
+        var aisbnValue: String! = isbn.text!
+        var aclassName: String! = "Books"
+        var bookTableQuery = BookSearchResultTable(style: subtitleCell!, className: aclassName, isbnValue: aisbnValue)
+        self.presentViewController(bookTableQuery, animated: true, completion: nil)
         
     }
+    
     
 }

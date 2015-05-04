@@ -12,6 +12,7 @@
 		818D2CDC1AEDFECA00C3D278 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818D2CDB1AEDFECA00C3D278 /* Accounts.framework */; };
 		818D2CDE1AEE005500C3D278 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818D2CDD1AEE005500C3D278 /* Twitter.framework */; };
 		818D2CE01AF0525C00C3D278 /* BookSearchResultTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818D2CDF1AF0525C00C3D278 /* BookSearchResultTable.swift */; };
+		81B057D21AF09D94003AC853 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B057D11AF09D94003AC853 /* File.swift */; };
 		81B69DCE1AEA9AC100D9E4BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B69DCD1AEA9AC100D9E4BB /* AppDelegate.swift */; };
 		81B69DD31AEA9AC100D9E4BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B69DD11AEA9AC100D9E4BB /* Main.storyboard */; };
 		81B69DD51AEA9AC100D9E4BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81B69DD41AEA9AC100D9E4BB /* Images.xcassets */; };
@@ -52,6 +53,7 @@
 		818D2CDB1AEDFECA00C3D278 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		818D2CDD1AEE005500C3D278 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		818D2CDF1AF0525C00C3D278 /* BookSearchResultTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookSearchResultTable.swift; sourceTree = "<group>"; };
+		81B057D11AF09D94003AC853 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		81B69DC81AEA9AC100D9E4BB /* TextCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B69DCC1AEA9AC100D9E4BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81B69DCD1AEA9AC100D9E4BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,10 +143,11 @@
 			isa = PBXGroup;
 			children = (
 				818D2CD71AEDEA4F00C3D278 /* LoginView.swift */,
-				81B69DCD1AEA9AC100D9E4BB /* AppDelegate.swift */,
 				818D2CDF1AF0525C00C3D278 /* BookSearchResultTable.swift */,
+				81B69DCD1AEA9AC100D9E4BB /* AppDelegate.swift */,
 				81B69DD11AEA9AC100D9E4BB /* Main.storyboard */,
 				81B69DCB1AEA9AC100D9E4BB /* Supporting Files */,
+				81B057D11AF09D94003AC853 /* File.swift */,
 			);
 			path = TextCycle;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				818D2CE01AF0525C00C3D278 /* BookSearchResultTable.swift in Sources */,
+				81B057D21AF09D94003AC853 /* File.swift in Sources */,
 				818D2CD81AEDEA4F00C3D278 /* LoginView.swift in Sources */,
 				81B69DCE1AEA9AC100D9E4BB /* AppDelegate.swift in Sources */,
 			);
