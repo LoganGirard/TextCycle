@@ -18,7 +18,7 @@ class BookSearchResultTable: PFQueryTableViewController{
         super.init(coder: aDecoder)
     }
     
-    override init!(style: UITableViewStyle, className: String!) {
+    override init(style: UITableViewStyle, className: String!) {
         super.init(style: style, className: className)
     }
     
@@ -29,7 +29,7 @@ class BookSearchResultTable: PFQueryTableViewController{
     
     
     
-    override func queryForTable() -> PFQuery! {
+    override func queryForTable() -> PFQuery {
         var query = PFQuery(className: "Books")
         query.whereKey("isbn", equalTo: self.isbn)
         return query 
