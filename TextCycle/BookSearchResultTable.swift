@@ -35,5 +35,26 @@ class BookSearchResultTable: PFQueryTableViewController{
         return query 
     }
     
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
+        
+        let cellIdentifier = "Cell"
+        
+        var cell:PFTableViewCell? = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as? PFTableViewCell
+        
+        if(cell == nil) {
+            cell = PFTableViewCell(style: UITableViewCellStyle(rawValue: 0)!, reuseIdentifier: cellIdentifier)
+        }
+        
+        if let pfObject = object {
+            cell?.textLabel?.text = pfObject["isbn"] as? String
+            var bookImage = UIImage(data: pfObject["photo"] as NSData)
+            cell?.imageView.image = bookImage
+        }
+        
+        return cell!
+    }
+    
+    
+    
     
 }
