@@ -26,6 +26,8 @@ class BookSearchResultTable: PFQueryTableViewController{
         super.init(style: style, className: className)
         pullToRefreshEnabled = true
         self.isbn = isbnValue
+        tableView.reloadData()
+        tableView.rowHeight = 100.0
     }
     
     
@@ -42,26 +44,33 @@ class BookSearchResultTable: PFQueryTableViewController{
         
         var cell:PFTableViewCell? = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as? PFTableViewCell
         
+        
         if(cell == nil) {
             cell = PFTableViewCell(style: UITableViewCellStyle(rawValue: 0)!, reuseIdentifier: cellIdentifier)
+            
+            //create blank image context and extract transparent image from it
+            //this keeps our image from not intially appearing in the cell
+            
+            UIGraphicsBeginImageContextWithOptions(CGSizeMake(50, 50), false, 0.0)
+            cell?.imageView?.image = UIGraphicsGetImageFromCurrentImageContext()
+            
+            UIGraphicsEndImageContext()
         }
         
         if let pfObject = object {
+            
             cell?.textLabel?.text = pfObject["isbn"] as? String
-            println(pfObject["photo"])
+            
             pfObject["photo"]?.getDataInBackgroundWithBlock({ (data , error) -> Void in
+                
                 if(error == nil) {
                     cell?.imageView?.image = UIImage(data: data!)
+                    
                 }
-             }
-             )
-            
+                
+             })
         }
-        
+    
         return cell!
     }
-    
-    
-    
-    
 }
