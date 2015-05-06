@@ -42,19 +42,23 @@ class BookSearchResultTable: PFQueryTableViewController{
         
         let cellIdentifier = "Cell"
         
-        var cell:PFTableViewCell? = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as? PFTableViewCell
+        var cell:BookResultCell? = tableView.dequeueReusableCellWithIdentifier("bookResultCellID") as? BookResultCell
         
         
         if(cell == nil) {
-            cell = PFTableViewCell(style: UITableViewCellStyle(rawValue: 0)!, reuseIdentifier: cellIdentifier)
+            cell = BookResultCell(style: , reuseIdentifier: "bookResultCellID")
             
             //create blank image context and extract transparent image from it
             //this keeps our image from not intially appearing in the cell
+            
+            /**** Uncomment AFTER XIB TESTED
             
             UIGraphicsBeginImageContextWithOptions(CGSizeMake(50, 50), false, 0.0)
             cell?.imageView?.image = UIGraphicsGetImageFromCurrentImageContext()
             
             UIGraphicsEndImageContext()
+
+            ****/
         }
         
         if let pfObject = object {
