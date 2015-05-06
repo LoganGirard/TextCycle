@@ -18,18 +18,19 @@ class BookSearchResultTable: PFQueryTableViewController{
         super.init(coder: aDecoder)
     }
     
-    override init!(style: UITableViewStyle, className: String!) {
+    override init(style: UITableViewStyle, className: String!) {
         super.init(style: style, className: className)
     }
     
     init!(style: UITableViewStyle, className: String!, isbnValue: String!) {
         super.init(style: style, className: className)
+        pullToRefreshEnabled = true
         self.isbn = isbnValue
     }
     
     
     
-    override func queryForTable() -> PFQuery! {
+    override func queryForTable() -> PFQuery {
         var query = PFQuery(className: "Books")
         query.whereKey("isbn", equalTo: self.isbn)
         return query 
@@ -47,8 +48,14 @@ class BookSearchResultTable: PFQueryTableViewController{
         
         if let pfObject = object {
             cell?.textLabel?.text = pfObject["isbn"] as? String
-            var bookImage = UIImage(data: pfObject["photo"] as NSData)
-            cell?.imageView.image = bookImage
+            println(pfObject["photo"])
+            pfObject["photo"]?.getDataInBackgroundWithBlock({ (data , error) -> Void in
+                if(error == nil) {
+                    cell?.imageView?.image = UIImage(data: data!)
+                }
+             }
+             )
+            
         }
         
         return cell!
