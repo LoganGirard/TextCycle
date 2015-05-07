@@ -8,9 +8,10 @@
 
 import Foundation
 import UIKit
+import ParseUI
 
 
-class BookResultCell: UITableViewCell {
+class BookResultCell: PFTableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
