@@ -42,11 +42,11 @@ class BookSearchResultTable: PFQueryTableViewController{
         
         let cellIdentifier = "Cell"
         
-        var cell:BookResultCell? = tableView.dequeueReusableCellWithIdentifier("bookResultCellID") as? BookResultCell
+        var cell:BookResultCell? = (tableView.dequeueReusableCellWithIdentifier("bookResultCellID") as? BookResultCell?)!
         
         
         if(cell == nil) {
-            cell = BookResultCell()
+            cell = BookResultCell(frame: CGRect(x: 50, y: 50, width: 50, height: 50), reuseIdentifier: "bookResultCellID")
             
             //create blank image context and extract transparent image from it
             //this keeps our image from not intially appearing in the cell

@@ -22,4 +22,12 @@ class BookResultCell: PFTableViewCell {
     
     @IBOutlet weak var rentButton: UIButton!
     @IBOutlet weak var buyButton: UIButton!
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        fatalError("aDecoder not implemented")
+    }
 }
