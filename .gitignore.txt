@@ -1,0 +1,5 @@
+#userdata and shareddata that doesn't belong on project
+
+TextCycle.xcodeproj/project.xcworkspace/xcshareddata*
+TextCycle.xcodeproj/project.xcworkspace/xcuserdata*
+
