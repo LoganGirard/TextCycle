@@ -49,7 +49,6 @@ class LoginView: UIViewController, PFLogInViewControllerDelegate,
         }else{
             return false
         }
-        
     }
     
     func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
@@ -95,9 +94,9 @@ class LoginView: UIViewController, PFLogInViewControllerDelegate,
         var aisbnValue: String! = isbn.text!
         var aclassName: String! = "Books"
         var bookTableQuery = BookSearchResultTable(style: subtitleCell!, className: aclassName, isbnValue: aisbnValue)
-        self.presentViewController(bookTableQuery, animated: true, completion: nil)
         
+        //embedding nav controller
+        let navigationController = UINavigationController(rootViewController: bookTableQuery)
+        self.presentViewController(navigationController, animated: true, completion: nil)
     }
-    
-    
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MvM-Kp-T3U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KFp-ZP-rmJ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -35,13 +35,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQb-uN-meU">
-                                <rect key="frame" x="468" y="20" width="118" height="30"/>
+                                <rect key="frame" x="468" y="64" width="118" height="30"/>
                                 <state key="normal" title="Account Settings">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="logoutUser:" destination="MvM-Kp-T3U" eventType="touchUpInside" id="Cwl-T5-Wpy"/>
-                                    <segue destination="9cd-7J-pju" kind="show" id="Pvj-5i-EhD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -56,6 +55,7 @@
                             <constraint firstItem="9Ne-cj-vz1" firstAttribute="top" secondItem="xdT-EX-1cu" secondAttribute="bottom" constant="8" symbolic="YES" id="vTE-rq-ILx"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="NFz-ex-n8N"/>
                     <connections>
                         <outlet property="isbn" destination="xdT-EX-1cu" id="1P1-gn-OME"/>
                         <segue destination="ZY6-GC-KHd" kind="show" identifier="showBookResults" id="uBM-kO-ahd"/>
@@ -63,9 +63,8 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P1I-Gm-nA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18" y="548"/>
+            <point key="canvasLocation" x="830" y="548"/>
         </scene>
-
         <!--View Controller-->
         <scene sceneID="GfV-br-22f">
             <objects>
@@ -94,9 +93,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LDK-rZ-UFq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754" y="110"/>
+            <point key="canvasLocation" x="2314" y="192"/>
         </scene>
-        <!--View Controller-->
+        <!--Book Search Result Table-->
         <scene sceneID="CBI-3o-BD2">
             <objects>
                 <viewController id="ZY6-GC-KHd" customClass="BookSearchResultTable" customModule="TextCycle" customModuleProvider="target" sceneMemberID="viewController">
@@ -109,10 +108,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="9cd-7J-pju" kind="show" identifier="showAccount" id="0NX-rJ-yl0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1SA-yJ-0Pv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754" y="898"/>
+            <point key="canvasLocation" x="1566" y="898"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mIM-qo-Wxf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KFp-ZP-rmJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sj4-tP-zrk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MvM-Kp-T3U" kind="relationship" relationship="rootViewController" id="Udh-Zy-KfR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wDH-BK-lZM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18" y="548"/>
         </scene>
     </scenes>
 </document>
