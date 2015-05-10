@@ -27,7 +27,9 @@ class BookSearchResultTable: PFQueryTableViewController{
         self.isbn = isbnValue
     }
     
-    
+    override func viewWillAppear(animated: Bool) {
+        navigationItem.title = "TextCycle"
+    }
     
     override func queryForTable() -> PFQuery {
         var query = PFQuery(className: "Books")

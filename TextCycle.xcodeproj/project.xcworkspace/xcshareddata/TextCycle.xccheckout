@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>BD43A2B9-CEAE-4D11-AF29-37A2F5BA4985</string>
 	<key>IDESourceControlProjectName</key>
-	<string>TextCycle</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>C998F206BFCF2CB4CFD32098C5476BCE61A2EDDF</key>
 		<string>github.com:LoganGirard/TextCycle.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>TextCycle.xcodeproj</string>
+	<string>TextCycle.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>C998F206BFCF2CB4CFD32098C5476BCE61A2EDDF</key>

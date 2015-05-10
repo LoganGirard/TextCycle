@@ -80,7 +80,6 @@ class LoginView: UIViewController, PFLogInViewControllerDelegate,
     //Mark: Actions
     
     @IBAction func logoutUser(sender: UIButton) {
-        
         PFUser.logOut()
     }
     
@@ -90,13 +89,16 @@ class LoginView: UIViewController, PFLogInViewControllerDelegate,
     @IBOutlet weak var image: UIImageView!
     
     @IBAction func searchBook(sender: AnyObject) {
+        println("sderp")
         let subtitleCell = UITableViewStyle(rawValue: 1)
         var aisbnValue: String! = isbn.text!
         var aclassName: String! = "Books"
         var bookTableQuery = BookSearchResultTable(style: subtitleCell!, className: aclassName, isbnValue: aisbnValue)
+        var searchVC = self.storyboard?.instantiateViewControllerWithIdentifier("searchVC") as! LoginView
         
         //embedding nav controller
-        let navigationController = UINavigationController(rootViewController: bookTableQuery)
-        self.presentViewController(navigationController, animated: true, completion: nil)
+        let navigationController = UINavigationController(rootViewController: searchVC)
+        navigationController.pushViewController(bookTableQuery, animated: true)
+        //presentViewController(navigationController, animated: true, completion: nil)
     }
 }

@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Login View-->
+        <!--TextCycle-->
         <scene sceneID="CRH-oW-rIg">
             <objects>
-                <viewController id="MvM-Kp-T3U" customClass="LoginView" customModule="TextCycle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="searchVC" id="MvM-Kp-T3U" customClass="LoginView" customModule="TextCycle" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZHG-bp-nVP"/>
                         <viewControllerLayoutGuide type="bottom" id="9yN-mN-DdG"/>
@@ -55,7 +55,7 @@
                             <constraint firstItem="9Ne-cj-vz1" firstAttribute="top" secondItem="xdT-EX-1cu" secondAttribute="bottom" constant="8" symbolic="YES" id="vTE-rq-ILx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="NFz-ex-n8N"/>
+                    <navigationItem key="navigationItem" title="TextCycle" id="NFz-ex-n8N"/>
                     <connections>
                         <outlet property="isbn" destination="xdT-EX-1cu" id="1P1-gn-OME"/>
                         <segue destination="ZY6-GC-KHd" kind="show" identifier="showBookResults" id="uBM-kO-ahd"/>
@@ -78,9 +78,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQi-MQ-kYZ">
-                                <rect key="frame" x="234" y="28" width="132" height="21"/>
+                                <rect key="frame" x="234" y="72" width="132" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -95,7 +95,7 @@
             </objects>
             <point key="canvasLocation" x="2314" y="192"/>
         </scene>
-        <!--Book Search Result Table-->
+        <!--TextCycle-->
         <scene sceneID="CBI-3o-BD2">
             <objects>
                 <viewController id="ZY6-GC-KHd" customClass="BookSearchResultTable" customModule="TextCycle" customModuleProvider="target" sceneMemberID="viewController">
@@ -108,6 +108,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="TextCycle" id="SPw-Fo-wW9">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="v0y-fY-3UL"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="9cd-7J-pju" kind="show" identifier="showAccount" id="0NX-rJ-yl0"/>
                     </connections>
