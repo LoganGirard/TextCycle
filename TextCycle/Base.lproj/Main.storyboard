@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MvM-Kp-T3U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MvM-Kp-T3U">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -65,7 +65,6 @@
             </objects>
             <point key="canvasLocation" x="18" y="548"/>
         </scene>
-
         <!--View Controller-->
         <scene sceneID="GfV-br-22f">
             <objects>
@@ -81,7 +80,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQi-MQ-kYZ">
                                 <rect key="frame" x="234" y="28" width="132" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -96,7 +95,7 @@
             </objects>
             <point key="canvasLocation" x="754" y="110"/>
         </scene>
-        <!--View Controller-->
+        <!--Book Search Result Table-->
         <scene sceneID="CBI-3o-BD2">
             <objects>
                 <viewController id="ZY6-GC-KHd" customClass="BookSearchResultTable" customModule="TextCycle" customModuleProvider="target" sceneMemberID="viewController">
@@ -113,6 +112,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1SA-yJ-0Pv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="754" y="898"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="A0E-T4-aNi">
+            <objects>
+                <viewController id="K9L-8P-JHt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BQY-7j-Fez"/>
+                        <viewControllerLayoutGuide type="bottom" id="cIu-xL-MYs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NiY-wv-gJm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8LJ-US-ACg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1114" y="1572"/>
         </scene>
     </scenes>
 </document>
